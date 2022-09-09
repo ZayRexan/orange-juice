@@ -1,0 +1,158 @@
+.header
+	width: 100%
+	background-color: $bg-color
+
+	&.fixed
+		z-index: 10
+		position: fixed
+		top: 0
+		left: 0
+
+	&__container
+		max-width: $container-width + px
+		margin: 0px auto
+		padding: 10px 15px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		min-height: 70px
+
+	&__logo
+		z-index: 5
+		display: block
+
+.logo__img
+	width: 200px
+	height: auto
+	fill: $white
+
+.menu
+
+	&__burger
+		display: none
+
+	&__item
+		margin-right: 20px
+		&:last-child
+			margin: 0
+
+	&__link
+		position: relative
+		color: $white
+		+adaptive-font(18, 16)
+
+		&::after
+			position: absolute
+			content: ""
+			bottom: -3px
+			left: 50%
+			transform: translateX(-50%)
+			width: 0
+			height: 2px
+			background-color: currentColor
+			opacity: 0
+			visibility: hidden
+			transition: width .5s
+
+	&__link
+		&:hover
+			&::after
+				width: 100%
+				opacity: 1
+				visibility: visible
+
+@media (min-width: 767px)
+
+	.menu__list
+		display: flex
+		align-items: center
+
+	.menu__item
+		padding: 10px 0
+
+@media (max-width: 767px)
+
+	.menu__burger
+		z-index: 15
+		display: block
+		position: relative
+		width: 30px
+		height: 18px
+		cursor: pointer
+
+	.burger
+
+		&__line,
+
+		&::before,
+
+		&::after
+			left: 0
+			position: absolute
+			height: 10%
+			width: 100%
+			transition: all 0.3s ease 0s
+			background-color: $white
+
+		&::before,
+
+		&::after
+			content: ""
+
+		&::before
+			top: 0
+
+		&::after
+			bottom: 0
+
+		& span
+			top: 50%
+			transform: scale(1) translate(0px, -50%)
+
+		&.active span
+			transform: scale(0) translate(0px, -50%)
+
+		&.active::before
+			top: 50%
+			transform: rotate(-45deg) translate(0px, -50%)
+
+		&.active::after
+			bottom: 50%
+			transform: rotate(45deg) translate(0px, 50%)
+
+	.menu__body
+		z-index: 10
+		position: fixed
+		top: 0
+		left: -100%
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, 0.9)
+		padding: 100px 30px 30px 30px
+		transition: left 0.3s ease 0s
+		overflow: auto
+
+		&.active
+			left: 0
+
+		// * Стили для плашки фиксированного меню (закомментировать если не нужна фиксипрованная шапка)
+
+		// &::before
+		// 	z-index: 15
+		// 	content: ""
+		// 	position: fixed
+		// 	width: 100%
+		// 	top: 0
+		// 	left: 0
+		// 	height: 70px
+		// 	background-color: #b4b4b4
+
+	.menu__item
+		flex-wrap: wrap
+		margin-bottom: 30px
+
+		&:last-child
+			margin-bottom: 0
+
+	.menu__link
+		+adaptive-font(20, 16)

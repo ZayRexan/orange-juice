@@ -1,0 +1,45 @@
+.select
+	margin: 0 auto
+	position: relative
+	width: 250px
+
+	&.is-active .select__body
+		display: block
+
+	&__header
+		border: 1px solid #ccc
+		cursor: pointer
+		display: flex
+
+	&__current
+		font-size: 18px
+		line-height: 24px
+		padding: 8px
+
+	&__icon
+		align-items: center
+		display: flex
+		flex-shrink: 0
+		justify-content: center
+		height: 40px
+		margin-left: auto
+		text-align: center
+		width: 40px
+
+	&__body
+		border: 1px solid #cccccc
+		border-top: 0
+		display: none
+		left: 0
+		position: absolute
+		right: 0
+		top: 100%
+
+	&__item
+		cursor: pointer
+		font-size: 16px
+		line-height: 24px
+		padding: 8px
+
+	&__item:hover
+		background-color: #f2f2f2

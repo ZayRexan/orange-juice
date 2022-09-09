@@ -1,0 +1,42 @@
+.spollers
+
+	&__item
+		margin-bottom: 10px
+		background-color: $black
+
+		&:last-child
+			margin-bottom: 0
+
+	&__title
+		width: 100%
+		text-align: left
+		+adaptive-font(18, 16)
+		color: $white
+		padding: 10px
+		position: relative
+
+	&.init .spollers__title
+		padding: 10px 40px 10px 10px
+
+	&.init .spollers__title::before,
+
+	&.init .spollers__title::after
+		content: ""
+		width: 20px
+		height: 2px
+		background-color: $white
+		position: absolute
+		right: 10px
+		top: 20px
+		transition: transform 0.3s ease 0s
+
+	&.init .spollers__title::after
+		transform: rotate(-90deg)
+
+	&.init .spollers__title.active::after
+		transform: rotate(0deg)
+
+	&__text
+		padding: 0 10px 10px
+		color: $white
+		line-height: 130%

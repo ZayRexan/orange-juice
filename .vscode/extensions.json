@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"Atishay-Jain.All-Autocomplete",
+		"formulahendry.auto-rename-tag",
+		"kisstkondoros.vscode-gutter-preview",
+		"EditorConfig.EditorConfig",
+		"ionutvmi.path-autocomplete",
+		"esbenp.prettier-vscode"
+	]
+}
