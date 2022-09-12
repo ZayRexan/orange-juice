@@ -3,19 +3,19 @@
 	background-color: $bg-color
 
 	&.fixed
-		z-index: 10
 		position: fixed
-		top: 0
 		left: 0
+		top: 0
+		z-index: 10
 
 	&__container
-		max-width: $container-width + px
-		margin: 0px auto
-		padding: 10px 15px
 		display: flex
 		align-items: center
 		justify-content: space-between
+		margin: 0px auto
+		padding: 10px 15px
 		min-height: 70px
+		max-width: $container-width + px
 
 	&__logo
 		z-index: 5
@@ -42,16 +42,16 @@
 		+adaptive-font(18, 16)
 
 		&::after
-			position: absolute
 			content: ""
-			bottom: -3px
+			position: absolute
 			left: 50%
-			transform: translateX(-50%)
+			bottom: -3px
 			width: 0
 			height: 2px
 			background-color: currentColor
 			opacity: 0
 			visibility: hidden
+			transform: translateX(-50%)
 			transition: width .5s
 
 	&__link
@@ -73,9 +73,9 @@
 @media (max-width: 767px)
 
 	.menu__burger
+		position: relative
 		z-index: 15
 		display: block
-		position: relative
 		width: 30px
 		height: 18px
 		cursor: pointer
@@ -87,12 +87,12 @@
 		&::before,
 
 		&::after
-			left: 0
 			position: absolute
-			height: 10%
+			left: 0
 			width: 100%
-			transition: all 0.3s ease 0s
+			height: 10%
 			background-color: $white
+			transition: all 0.3s ease 0s
 
 		&::before,
 
@@ -121,16 +121,16 @@
 			transform: rotate(45deg) translate(0px, 50%)
 
 	.menu__body
-		z-index: 10
 		position: fixed
-		top: 0
 		left: -100%
+		top: 0
+		z-index: 10
+		overflow: auto
+		padding: 100px 30px 30px 30px
 		width: 100%
 		height: 100%
 		background-color: rgba(0, 0, 0, 0.9)
-		padding: 100px 30px 30px 30px
 		transition: left 0.3s ease 0s
-		overflow: auto
 
 		&.active
 			left: 0

@@ -9,9 +9,9 @@ html
 	box-sizing: inherit
 
 body
-	height: 100%
 	margin: 0
-	font-family: "Circe", sans-serif
+	height: 100%
+	font-family: 'Circe', sans-serif
 	font-weight: 400
 	+adaptive-font(18, 16)
 	color: $black
@@ -21,18 +21,18 @@ body
 		overflow: hidden
 
 .site-container
-	overflow: hidden
-	min-height: 100%
 	display: flex
 	flex-direction: column
+	overflow: hidden
+	min-height: 100%
 
 .main
 	flex: 1 1 auto
 
 .container
-	max-width: $container-width + px
 	margin: 0 auto
 	padding: 0 15px
+	max-width: $container-width + px
 
 img
 	max-width: 100%
@@ -43,13 +43,13 @@ img
 	color: inherit
 
 .list-reset
+	list-style: none
 	margin: 0
 	padding: 0
-	list-style: none
 
 .btn-reset
-	padding: 0
 	border: none
+	padding: 0
 	color: inherit
 	background-color: transparent
 	cursor: pointer
