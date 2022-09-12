@@ -33,6 +33,7 @@
 
 	&__item
 		margin-right: 20px
+
 		&:last-child
 			margin: 0
 
@@ -54,7 +55,6 @@
 			transform: translateX(-50%)
 			transition: width .5s
 
-	&__link
 		&:hover
 			&::after
 				width: 100%
@@ -92,12 +92,12 @@
 			width: 100%
 			height: 10%
 			background-color: $white
-			transition: all 0.3s ease 0s
+			transition: all .3s ease 0s
 
 		&::before,
 
 		&::after
-			content: ""
+			content: ''
 
 		&::before
 			top: 0
@@ -107,18 +107,19 @@
 
 		& span
 			top: 50%
-			transform: scale(1) translate(0px, -50%)
+			transform: scale(1) translate(0, -50%)
 
-		&.active span
-			transform: scale(0) translate(0px, -50%)
+		&.active
+			span
+				transform: scale(0) translate(0, -50%)
 
 		&.active::before
 			top: 50%
-			transform: rotate(-45deg) translate(0px, -50%)
+			transform: rotate(-45deg) translate(0, -50%)
 
 		&.active::after
 			bottom: 50%
-			transform: rotate(45deg) translate(0px, 50%)
+			transform: rotate(45deg) translate(0, 50%)
 
 	.menu__body
 		position: fixed
@@ -129,8 +130,8 @@
 		padding: 100px 30px 30px 30px
 		width: 100%
 		height: 100%
-		background-color: rgba(0, 0, 0, 0.9)
-		transition: left 0.3s ease 0s
+		background-color: rgba(0, 0, 0, .9)
+		transition: left .3s ease 0s
 
 		&.active
 			left: 0
